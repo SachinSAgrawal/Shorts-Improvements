@@ -1,77 +1,43 @@
 .custom-watch-later-container {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 4px;
+  right: 4px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.1s ease;
+  z-index: 99;
 }
 
-.shortsLockupViewModelHostThumbnailContainer:hover .custom-watch-later-container {
+.shortsLockupViewModelHostThumbnailParentContainer:hover .custom-watch-later-container {
   opacity: 1.0;
   pointer-events: all;
 }
 
 .custom-watch-later-button {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 28px;
-  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(40, 40, 40, 0.4);
   border: none;
-  border-radius: 4px;
-  overflow: hidden;
+  border-radius: 50%;
   cursor: pointer;
   padding: 0;
-  width: 28px;
-  transition: width 0.3s ease, background-color 0.1s ease;
+  color: white;
+  transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
 }
 
 .custom-watch-later-button:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
-
-.custom-watch-later-button.hover-watch-later:hover {
-  width: 100px;
-}
-
-.custom-watch-later-button.hover-added:hover {
-  width: 74px;
+  background-color: rgba(40, 40, 40, 0.6);
+  backdrop-filter: blur(4px);
 }
 
 .custom-watch-later-button svg {
-  width: 28px;
-  height: 28px;
-  margin: 4px;
-  margin-right: 0;
-  fill: currentColor;
-  flex-shrink: 0;
+  width: 29px;
+  height: 29px;
+  fill: white;
   pointer-events: none;
-  z-index: 2;
-  color: white;
-  opacity: 1.0;
-}
-
-.custom-watch-later-label {
-  position: absolute;
-  left: 0;
-  padding-left: 8px;
-  font-size: 12px;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 500;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  color: white;
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
-  z-index: 1;
-}
-
-.custom-watch-later-button:hover .custom-watch-later-label {
-  transform: translateX(0);
-  opacity: 1.0;
+  overflow: visible;
+  filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 1.0)) !important;
 }

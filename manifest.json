@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Shorts Watch Later",
-  "version": "1.1",
-  "description": "Adds a native-looking Watch Later button to each video in the Shorts tab of a YouTube channel.",
+  "name": "YouTube Shorts Improvements",
+  "version": "2.0",
+  "description": "Adds a native-looking Watch Later button and the publish date to each video in the Shorts tab of a YouTube channel.",
   "permissions": [
     "scripting"
   ],
